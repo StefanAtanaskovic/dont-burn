@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Player PvP Game</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Two Player PvP Game</h1>
+    <div>
+        <h2>Player 1</h2>
+        <canvas id="player1Canvas" width="300" height="300"></canvas>
+    </div>
+    <div>
+        <h2>Player 2</h2>
+        <canvas id="player2Canvas" width="300" height="300"></canvas>
+    </div>
+    <script>
+        // Game logic goes here
+        const player1Canvas = document.getElementById('player1Canvas');
+        const player2Canvas = document.getElementById('player2Canvas');
+        const player1Ctx = player1Canvas.getContext('2d');
+        const player2Ctx = player2Canvas.getContext('2d');
+
+        // Example drawing function
+        player1Ctx.fillStyle = 'red';
+        player1Ctx.fillRect(10, 10, 100, 100);
+        player2Ctx.fillStyle = 'blue';
+        player2Ctx.fillRect(10, 10, 100, 100);
+    </script>
+</body>
+</html>
